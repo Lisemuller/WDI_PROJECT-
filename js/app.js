@@ -5,45 +5,56 @@ $(function(){
    var botChoice; 
    var round = 0;
    var $containers = $('.container');
+
    // var round1 = $('.container').eq(0);
 
 
 // get the random solution by the computer 
-// $('.sol').addClass(function() {
-//      var index = Math.floor(Math.random() * choices.length);
-//      botChoice = choices[index];
-//      return botChoice;
-// });
+$('.sol').addClass(function() {
+  var index = Math.floor(Math.random() * choices.length);
+  botChoice = choices[index];
+  return botChoice;
+});
 
 // make the player choose a combination of 4 colours using the keyboard : 
 
+// $('#').addClass(function(){
+//   return getPlayerChoice();
+// });
 
 
 // make eventlistener for each key 
 //
-  function getPlayerChoice () {
-    var playerChoice;
-    $(document).on("keyup", function(event) {
+var playerChoice = null;
+var choiceCount = 0;
+$(document).on("keyup", function(event) {
 
-      if(event.keyCode === 81) {
-        playerChoice = "pink";
-      }
-      else if(event.keyCode === 87) {
-        playerChoice = "blue";
-      }
-      else if(event.keyCode === 69) {
-        playerChoice = "green";
-      }
-      else if (event.keyCode === 82) {
-        playerChoice = "yellow";
-      }
-      console.log(playerChoice);
-    })
-    return playerChoice;
-  };
+  if(event.keyCode === 81) {
+    playerChoice = "pink";
+  }
+  else if(event.keyCode === 87) {
+    playerChoice = "blue";
+  }
+  else if(event.keyCode === 69) {
+    playerChoice = "green";
+  }
+  else if (event.keyCode === 82) {
+    playerChoice = "yellow";
+  }
+  else {
+    playerChoice = null;
+  }
 
-getPlayerChoice();
 
+  if(playerChoice) {
+    var $currentRound = $('.container').eq(round);
+    var $currentCells = $currentRound.find('.large');
+    $currentCells.eq(choiceCount).addClass(playerChoice);
+
+    choiceCount++;
+  }
+
+});
 
 
 
