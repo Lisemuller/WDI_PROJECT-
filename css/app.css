@@ -1,12 +1,26 @@
-.sol { width : 50px; height: 50px; border: solid 2px black; display: inline-block;}
+.player1 {display : inline-block;}
+
+.sol { width : 50px; height: 50px; border: solid 2px black; display: inline-block; margin-bottom: 20px;}
+
 .table{ width : 400px; height: 400px;}
 .large { width : 50px; height: 50px; border: solid 2px black; display: inline-block;}
 .small { width : 20px; height: 20px; border: solid 1px grey; display: inline-block;vertical-align : top}
-.keyboard {width : 50px; height: 50px; border: solid 2px black; display: inline-block;}
+
+.howTo {margin-top: 40px;width : 400px; height: 2000px; display : inline-block;}
 .rabbit {width : 50px; height: 50px; border: solid 2px black; display: inline-block;}
+.keyboard {width : 50px; height: 50px; border: solid 2px black; display: inline-block;
+font-family : Verdana;
+font-weight: bold;
+font-size : 30px;
+color : black;
+text-align: center;
+line-height: 50px;
+}
+
 
 .pink {background-image: url("../images/pinkrabbit.jpg"); background-size: 50px 50px;}
 .green {background-image: url("../images/greenrabbit.jpg"); background-size: 50px 50px;}
 .yellow {background-image: url("../images/yellowrabbit.jpg"); background-size: 50px 50px;}
 .blue {background-image: url("../images/bluerabbit.jpg"); background-size: 50px 50px;}
 
+img { width : 50px; height: 50px;}
