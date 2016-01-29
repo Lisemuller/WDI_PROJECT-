@@ -1,19 +1,23 @@
 $(function(){
 
-   var solutions = $('.sol'); 
-
-   var choices   = ["green", "blue", "pink", "violet"];
+   var solutions = $('.sol'); // transform the solutions in an array
+   // var choices   = ["green", "blue", "pink", "violet"];
+   var choices   = ["pink", "green", "yellow", "blue"];
    var botChoice; 
 
-
-$('.sol').html(function() {
+// get the random solution by the computer 
+$('.sol').addClass(function() {
      var index = Math.floor(Math.random() * choices.length);
      botChoice = choices[index];
      return botChoice;
 });
-console.log(solutions[0]);
-console.log(solutions[1]);
-console.log(solutions[2]);
-console.log(solutions[3]);
+
+
+
+
+
+
+
+
 
 });
