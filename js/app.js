@@ -99,12 +99,15 @@ $(document).on("keyup", function(event) {
 
   }
 
-  if (green == 4) {
+  
+    // $.each($currentRound.find('.small'), function(i, elem) {
+  if (($('.green').length) == 4)) {
    console.log("well done ! You found the solution in" + round + "!");
   }
-  else if ((green < 4) && (round <= 8)) {
+  else if (($('.green')).length) < 4) && (round == 8)) {
     console.log("Yoo loose against the evil rabbot generator");
   }
+// });
 
 
 });
