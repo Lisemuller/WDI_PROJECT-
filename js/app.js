@@ -1,8 +1,7 @@
 $(function(){
 
    var $solutions = $('.sol'); 
-   var choices   = ["pink", "green", "yellow", "blue"];
-   var botChoice; 
+   var choices   = ["pink", "violet", "yellow", "blue"];
    var round = 0;
    var $containers = $('.container');
 
@@ -12,8 +11,7 @@ $(function(){
 // get the random solution by the computer 
 $('.sol').addClass(function() {
   var index = Math.floor(Math.random() * choices.length);
-  botChoice = choices[index];
-  return botChoice;
+  return choices[index];
 });
 
 // make the player choose a combination of 4 colours using the keyboard : 
@@ -34,7 +32,7 @@ $(document).on("keyup", function(event) {
     playerChoice = "blue";
   }
   else if(event.keyCode === 69) {
-    playerChoice = "green";
+    playerChoice = "violet";
   }
   else if (event.keyCode === 82) {
     playerChoice = "yellow";
@@ -53,37 +51,63 @@ $(document).on("keyup", function(event) {
     choiceCount++;
   }
 
-  if (jQuery.inArray( "pink", $currentCells ) )  {
-    console.log("hello");
+
+
+  var green = 0;
+  var red = 0;
+  var black = 0;
+
+  if (choiceCount == 4) {
+    $.each($currentCells, function(i,cell){
+
+      var choiceClass = $(cell).attr('class').replace('large ', '');
+      var solutionClass = $solutions.eq(i).attr('class').replace('sol ', '');
+
+      if(choiceClass === solutionClass) {
+        console.log("this is green");
+        green++;
+      } else if($solutions.hasClass(choiceClass)) {
+        console.log("this is red");
+        red++;
+      }
+      else {
+        console.log("this is black");
+        black++;
+      }
+    }); 
+    console.log(green,red, black);
+
+    $.each($currentRound.find('.small'), function(i, elem) {
+      if(green > 0) {
+        $(elem).addClass('green');
+        green -= 1;
+      }
+      else if(red > 0) {
+        $(elem).addClass('red');
+        red -= 1;
+      }
+      else if (black > 0) {
+        $(elem).addClass('black');
+        black -= 1;
+      }
+  
+
+    });
+
+    round++;
+    choiceCount = 0;
+
   }
 
-  
+  if (green == 4) {
+   console.log("well done ! You found the solution in" + round + "!");
+  }
+  else if ((green < 4) && (round <= 8)) {
+    console.log("Yoo loose against the evil rabbot generator");
+  }
+
+
 });
-
-
-
-
-
-// make the computer give the feedback 
-
-// function evaluate() {
-//   switch (botChoice) {
-//     case "rock":
-//     if (botChoice == "paper") { botScore++; } 
-//     if (botChoice == "scissors") { userScore++; }
-//     break;
-
-//     case "paper":
-//     if (botChoice == "rock") { userScore++; } 
-//     if (botChoice == "scissors") { botScore++; }
-//     break;
-
-//     case "scissors":
-//     if (botChoice == "paper") { userScore++; } 
-//     if (botChoice == "rock") { botScore++; }
-//     break;
-//   }
-// }
 
 
 // make it play 
