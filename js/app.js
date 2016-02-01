@@ -1,5 +1,8 @@
 $(function(){
 
+
+  //PLAYER 1
+
    //Create an array with the container solutions 
    // Create an array with all the different solutions
    // Put the round to zero. 
@@ -100,6 +103,7 @@ $(function(){
         round++;
         choiceCount = 0;
 
+        // gameLogic
         var gameLost = round >= 8;
 
 
@@ -112,38 +116,125 @@ $(function(){
 
       }  // close the choicecount==4
 
-  
-  
-        // if (($('.green').length) == 4)) {
-        //  console.log("well done ! You found the solution in" + round + "!");
-        // }
-        // else if (($('.green')).length) < 4) && (round == 8)) {
-        //   console.log("Yoo loose against the evil rabbot generator");
-        // }
-
-
-
     });// close the on key up function event 
 
 
-// make it play 
-//  if ((the feedback of the computer) < 4 green) {
-//   round ++;
-//   else if ((the feedback of the computer) < 4 green) && (round <=8))  {
-//  console.log ("Well done ! You found the solution in" + round + "!");
-//   }
-//  else {
-//     console.log("You loose against the evil rabbit generator")
-// }
-//  }
+// PLAYER 2
+
+//Create an array with the container solutions 
+// Create an array with all the different solutions
+// Put the round to zero. 
+var $solutions2 = $('.sol2'); 
+var choices2   = ["pink", "violet", "yellow", "blue"];
+var round2 = 0;
+var $containers2 = $('.container2');
 
 
-// associate each containers to each round
-// function getRound(){
-//   console.log($containers.eq(round));
-// }
 
-// getRound();
+
+ // Get the random solution by the computer 
+ $('.sol2').addClass(function() {
+   var index = Math.floor(Math.random() * choices2.length);
+   return choices2[index];
+ });
+
+
+ // make eventlistener for each key 
+
+ var playerChoice2 = null;
+ var choiceCount2 = 0;
+
+ $(document).on("keyup", function(event) {
+
+   if(event.keyCode === 85) {
+     playerChoice2 = "pink";
+   }
+   else if(event.keyCode === 73) {
+     playerChoice2 = "blue";
+   }
+   else if(event.keyCode === 79) {
+     playerChoice2 = "violet";
+   }
+   else if (event.keyCode === 80) {
+     playerChoice2 = "yellow";
+   }
+   else {
+     playerChoice2 = null;
+   }
+
+
+   // make the choice enter in the first container and go to the other round
+
+   if(playerChoice2) {
+     var $currentRound2 = $('.container2').eq(round2);
+     var $currentCells2 = $currentRound2.find('.large2');
+     $currentCells2.eq(choiceCount2).addClass(playerChoice2);
+     choiceCount2++;
+   }
+
+   // Give the feedback of the computer ...
+
+     var green2 = 0;
+     var red2 = 0;
+     var black2 = 0;
+
+   if (choiceCount2 == 4) {
+     $.each($currentCells2, function(i,cell){
+
+       var choiceClass2 = $(cell).attr('class').replace('large2 ', '');
+       var solutionClass2 = $solutions.eq(i).attr('class').replace('sol2 ', '');
+
+        if(choiceClass2 === solutionClass2) {
+           console.log("this is green");
+           green2++;
+       } else if($solutions2.hasClass(choiceClass2)) {
+           console.log("this is red");
+           red2++;
+       }
+         else {
+           console.log("this is black");
+           black2++;
+       }
+     });
+
+     var gameWon2 = (green2 === 4);
+
+
+     //and make it appears in the litte  boxes each round
+
+     $.each($currentRound2.find('.small2'), function(i, elem) {
+       if(green2 > 0) {
+         $(elem).addClass('green2');
+         green2 -= 1;
+       }
+       else if(red2 > 0) {
+         $(elem).addClass('red2');
+         red2 -= 1;
+       }
+       else if (black2 > 0) {
+         $(elem).addClass('black2');
+         black2 -= 1;
+       }
+      });
+
+     // make it play to an another round and put the counter of each row to zero each time
+     round2++;
+     choiceCount2 = 0;
+
+     // gameLogic
+     var gameLost2 = round2 >= 8;
+
+
+     if(gameWon2) {
+       console.log("well done ! You found the solution in" + round2 + " round !");
+     } else if(gameLost2) {
+       console.log("You lost against the evil rabbit generator");
+     }
+
+
+   }  // close the choicecount==4
+
+ });// close the on key up function event 
 
 
 
