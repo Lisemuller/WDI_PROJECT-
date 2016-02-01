@@ -1,3 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+body {
+  background-image: url("../images/il_570xN.733408138_o9li.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 60px;
+
+}
 .player1 {display : inline-block; float: left; margin-left: 50px;}
 .player2 {display : inline-block; float: right;margin-right: 50px;}
 
@@ -13,8 +26,8 @@
 .small  { width : 20px; height: 20px; border: solid 1px grey; display: inline-block;vertical-align : top}
 .small2 { width : 20px; height: 20px; border: solid 1px grey; display: inline-block;vertical-align : top}
 
-.howTo  {margin-top: 40px;width : 400px; height: 2000px; display : inline-block;}
-.howTo2 {margin-top: 40px;width : 400px; height: 2000px; display : inline-block;}
+.howTo  {margin-top: 40px;width : 400px; height: 200px; display : inline-block;}
+.howTo2 {margin-top: 40px;width : 400px; height: 200px; display : inline-block;}
 
 .rabbit {width : 50px; height: 50px; border: solid 2px black; display: inline-block;}
 .rabbit2{width : 50px; height: 50px; border: solid 2px black; display: inline-block;}
