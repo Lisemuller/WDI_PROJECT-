@@ -1,30 +1,56 @@
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 
 body {
-  background-image: url("../images/il_570xN.733408138_o9li.jpg");
+  background-color: white;
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+img {
+  width : 500px; 
+  height: 500px;
+  text-align: center;
 }
 
 h1 {
   font-family: "Pacifico", cursive;
   font-size: 60px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
 }
-.player1 {display : inline-block; float: left; margin-left: 50px;}
-.player2 {display : inline-block; float: right;margin-right: 50px;}
 
-.sol  { width : 50px; height: 50px; border: solid 2px black; display: inline-block; margin-bottom: 20px;}
-.sol2  { width : 50px; height: 50px; border: solid 2px black; display: inline-block; margin-bottom: 20px;}
+.speechBubble {
+  background-image: url("../images/speech-bubble-md.png");
+  width : 400px; 
+  height: 300px;
+  text-align: center;
+  display : inline-block;
+  background-repeat: no-repeat;
+
+}
+
+.player1 {display : inline-block; float: left; margin-left: 50px;}
+.player2 {display : inline-block; float: right;margin-right: 50px; text-align: right;}
+
+.solution {border : solid 3px #ffc1c1 ;width : 230px; height: 60px; display: inline-block; margin-bottom: 10px;}
+.solution2 {border: solid 3px  #ffc1c1; width : 230px; height: 60px; display: inline-block;margin-bottom: 10px;}
+
+.solution p {font-family: "Pacifico", cursive; font-size: 20px; text-align: center; color: #ffc1c1;}
+.solution2 p {font-family: "Pacifico", cursive; font-size: 20px;text-align: center; color: #ffc1c1;}
+
+.sol  { width : 50px; height: 50px; display: inline-block; margin-bottom: 20px;border-radius: 50px; display : none;margin-top: 4px; margin-left: 2px; display: none;}
+.sol2  { width : 50px; height: 50px; display: inline-block; margin-bottom: 20px;border-radius: 50px; display : none; margin-top: 4px;margin-left: 2px;display: none;}
 
 .table  { width : 400px; height: 400px;}
 .table2 { width : 400px; height: 400px;}
 
-.large  { width : 50px; height: 50px; border: solid 2px black; display: inline-block;}
-.large2 { width : 50px; height: 50px; border: solid 2px black; display: inline-block;}
+.large  { width : 50px; height: 50px; border: solid 1px  #eeeeee; display: inline-block; border-radius: 50%; }
+.large2 { width : 50px; height: 50px; border: solid 1px  #eeeeee; display: inline-block; border-radius: 50%}
 
-.small  { width : 20px; height: 20px; border: solid 1px grey; display: inline-block;vertical-align : top}
-.small2 { width : 20px; height: 20px; border: solid 1px grey; display: inline-block;vertical-align : top}
+.small  { width : 10px; height: 10px; display: inline-block;vertical-align : top}
+.small2 { width : 10px; height: 10px; display: inline-block;vertical-align : top}
 
 .howTo  {margin-top: 40px;width : 400px; height: 200px; display : inline-block;}
 .howTo2 {margin-top: 40px;width : 400px; height: 200px; display : inline-block;}
@@ -51,18 +77,26 @@ line-height: 50px;
 }
 
 
-.pink {background-image: url("../images/pinkrabbit.jpg"); background-size: 50px 50px;}
-.violet {background-image: url("../images/violetrabbit.jpg"); background-size: 50px 50px;}
-.yellow {background-image: url("../images/yellowrabbit.jpg"); background-size: 50px 50px;}
-.blue {background-image: url("../images/bluerabbit.jpg"); background-size: 50px 50px;}
+.pink {background-image: url("../images/pinkrabbit.jpg"); background-size: 50px 50px;width : 50px; height: 50px; }
+.violet {background-image: url("../images/violetrabbit.jpg"); background-size: 50px 50px;width : 50px; height: 50px; }
+.yellow {background-image: url("../images/yellowrabbit.jpg"); background-size: 50px 50px;width : 50px; height: 50px; }
+.blue {background-image: url("../images/bluerabbit.jpg"); background-size: 50px 50px;width : 50px; height: 50px; }
 
-.small.green {background-color: green; }
-.small2.green2 {background-color: green; }
+.small.green {background-color: #6fcb9f; }
+.small2.green2 {background-color: #6fcb9f; }
 
-.red {background-color: red}
-.red2 {background-color: red}
+.red {background-color:  #fb2e01}
+.red2 {background-color: #fb2e01}
 
-.black  {background-color: black}
-.black2  {background-color: black}
+.black  {background-color: #666547}
+.black2  {background-color: #666547}
 
-img { width : 50px; height: 50px;}
+.rabbit img { width : 50px; height: 50px;}
+.rabbit2 img { width : 50px; height: 50px;}
+
+.visible p {display:none;}
+.visible2 p {display: none;}
+
+.visible .sol  {display:inline-block;}
+.visible2  .sol2 {display: inline-block;}
+

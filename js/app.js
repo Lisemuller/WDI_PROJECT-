@@ -109,8 +109,10 @@ $(function(){
 
         if(gameWon) {
           console.log("well done ! You found the solution in" + round + " round !");
+          $('.solution').addClass("visible");
         } else if(gameLost) {
           console.log("You lost against the evil rabbit generator");
+          $('.solution').addClass("visible");
         }
 
 
@@ -227,8 +229,10 @@ var $containers2 = $('.container2');
 
      if(gameWon2) {
        console.log("well done ! You found the solution in" + round2 + " round !");
+       $('.solution2').addClass("visible2");
      } else if(gameLost2) {
        console.log("You lost against the evil rabbit generator");
+       $('.solution2').addClass("visible2");
      }
 
 
