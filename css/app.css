@@ -4,12 +4,8 @@ body {
   background-color: white;
   background-repeat: no-repeat;
   background-size: 100%;
-}
-
-img {
-  width : 500px; 
-  height: 500px;
-  text-align: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
 h1 {
@@ -21,19 +17,20 @@ h1 {
 
 }
 
-.speechBubble {
-  background-image: url("../images/speech-bubble-md.png");
-  width : 400px; 
-  height: 300px;
+p#rules {
+  font-family: "Pacifico", cursive;
+  font-size: 16px;
+  padding : 10px;
   text-align: center;
-  display : inline-block;
-  background-repeat: no-repeat;
-
+  text-align: justify;
+  display: inline-block;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
-.player1 {display : inline-block; float: left; margin-left: 50px;}
-.player2 {display : inline-block; float: right;margin-right: 50px; text-align: right;}
-
+.left-panel {display : inline-block; vertical-align: top; width: 33%;}
+.right-panel {display : inline-block; text-align: right;vertical-align: top; width: 33%;}
+.middle-panel { display: inline-block; vertical-align: top; width: 33%; background-image: url(../images/il_570xN.733408138_o9li.jpg); background-repeat: no-repeat; background-position: center bottom -40px; height: calc(100vh - 135px); }
 .solution {border : solid 3px #ffc1c1 ;width : 230px; height: 60px; display: inline-block; margin-bottom: 10px;}
 .solution2 {border: solid 3px  #ffc1c1; width : 230px; height: 60px; display: inline-block;margin-bottom: 10px;}
 
@@ -43,8 +40,8 @@ h1 {
 .sol  { width : 50px; height: 50px; display: inline-block; margin-bottom: 20px;border-radius: 50px; display : none;margin-top: 4px; margin-left: 2px; display: none;}
 .sol2  { width : 50px; height: 50px; display: inline-block; margin-bottom: 20px;border-radius: 50px; display : none; margin-top: 4px;margin-left: 2px;display: none;}
 
-.table  { width : 400px; height: 400px;}
-.table2 { width : 400px; height: 400px;}
+.table  { height: 400px;}
+.table2 { height: 400px;}
 
 .large  { width : 50px; height: 50px; border: solid 1px  #eeeeee; display: inline-block; border-radius: 50%; }
 .large2 { width : 50px; height: 50px; border: solid 1px  #eeeeee; display: inline-block; border-radius: 50%}
@@ -52,8 +49,8 @@ h1 {
 .small  { width : 10px; height: 10px; display: inline-block;vertical-align : top}
 .small2 { width : 10px; height: 10px; display: inline-block;vertical-align : top}
 
-.howTo  {margin-top: 40px;width : 400px; height: 200px; display : inline-block;}
-.howTo2 {margin-top: 40px;width : 400px; height: 200px; display : inline-block;}
+.howTo  {margin-top: 40px;width : 400px; display : inline-block;font-family: "Pacifico", cursive; font-size: 15px;}
+.howTo2 {margin-top: 40px;width : 400px; display : inline-block;font-family: "Pacifico", cursive; font-size: 15px;}
 
 .rabbit {width : 50px; height: 50px; border: solid 2px black; display: inline-block;}
 .rabbit2{width : 50px; height: 50px; border: solid 2px black; display: inline-block;}
