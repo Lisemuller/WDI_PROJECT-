@@ -115,6 +115,12 @@ $(function(){
           $('.solution').addClass("visible");
         }
 
+        if  (($('.solution').hasClass("visible")) && (gameWon)){
+          $('#rules').html("Player Left found the solution in" + round + "round")
+        }
+        else if (gameLost){
+         $('#rules').html("Player Left lost against the Evil Rabbit Generator")
+        }
 
       }  // close the choicecount==4
 
@@ -235,10 +241,18 @@ var $containers2 = $('.container2');
        $('.solution2').addClass("visible2");
      }
 
+     if  (($('.solution2').hasClass("visible2")) && (gameWon2)){
+       $('#winner2').html("Player Right found the solution in" + round + "round")
+     }
+     else if(gameLost2){
+      $('#winner2').html("Player Right lost against the Evil Rabbit Generator ")
+     }
 
    }  // close the choicecount==4
 
  });// close the on key up function event 
+
+
 
 
 

@@ -28,9 +28,21 @@ p#rules {
   padding-top: 0px;
 }
 
+p#winner2 {
+  font-family: "Pacifico", cursive;
+  font-size: 16px;
+  padding : 10px;
+  text-align: center;
+  text-align: justify;
+  display: inline-block;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
 .left-panel {display : inline-block; vertical-align: top; width: 33%;}
 .right-panel {display : inline-block; text-align: right;vertical-align: top; width: 33%;}
 .middle-panel { display: inline-block; vertical-align: top; width: 33%; background-image: url(../images/il_570xN.733408138_o9li.jpg); background-repeat: no-repeat; background-position: center bottom -40px; height: calc(100vh - 135px); }
+
 .solution {border : solid 3px #ffc1c1 ;width : 230px; height: 60px; display: inline-block; margin-bottom: 10px;}
 .solution2 {border: solid 3px  #ffc1c1; width : 230px; height: 60px; display: inline-block;margin-bottom: 10px;}
 
