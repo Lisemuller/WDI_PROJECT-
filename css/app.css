@@ -86,10 +86,10 @@ line-height: 50px;
 }
 
 
-.pink {background-image: url("../images/pinkrabbit.jpg"); background-size: 50px 50px;width : 50px; height: 50px; }
-.violet {background-image: url("../images/violetrabbit.jpg"); background-size: 50px 50px;width : 50px; height: 50px; }
-.yellow {background-image: url("../images/yellowrabbit.jpg"); background-size: 50px 50px;width : 50px; height: 50px; }
-.blue {background-image: url("../images/bluerabbit.jpg"); background-size: 50px 50px;width : 50px; height: 50px; }
+.pink {background-image: url("../Images/pinkrabbit.jpg"); background-size: 50px 50px;width : 50px; height: 50px; }
+.violet {background-image: url("../Images/violetrabbit.jpg"); background-size: 50px 50px;width : 50px; height: 50px; }
+.yellow {background-image: url("../Images/yellowrabbit.jpg"); background-size: 50px 50px;width : 50px; height: 50px; }
+.blue {background-image: url("../Images/bluerabbit.jpg"); background-size: 50px 50px;width : 50px; height: 50px; }
 
 .small.green {background-color: #6fcb9f; }
 .small2.green2 {background-color: #6fcb9f; }
