@@ -289,7 +289,7 @@ var sol2 = [];
      playerChoice2 = null;
      choiceCount2 = 0;
      guess2 = [];
-     sol = [];
+     sol2 = [];
 
 
      // gameLogic
